@@ -1,0 +1,117 @@
+.perfil-aside {
+    background-color: rgb(43, 33, 175);
+    float:inline-start;
+    height: 100vh;
+    width: 15%;
+    margin-left: 20.4%;
+    position: relative;
+}
+
+.perfil-pic {
+    width: 10rem;
+    height: 10rem;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    border-radius: 50%;
+    border: 5px rgb(136, 136, 153) solid;
+}
+
+.selected {
+    color:rgb(226, 222, 217);
+}
+
+.perfil-nav {
+    background-color: rgb(43, 33, 175);
+    position:absolute;
+    top: 65%;
+    left: 46%;
+    transform:translate(-50%, 0);
+    text-align: center;
+}
+
+.perfil-nav-ul {
+    padding: 0;
+    background-color: inherit;
+}
+
+.perfil-nav-li {
+    padding: 0.5rem;
+    list-style-type: none; 
+    background-color: rgb(43, 33, 175);
+}
+
+.perfil-nav-li > a {
+    text-decoration: none;
+    color:rgba(196, 183, 183, 0.784);
+    background-color: rgb(43, 33, 175);
+}
+
+.perfil-article-name {
+    color:black;
+}
+
+.perfil-main {
+    background-color: rgb(148, 139, 139);
+    float:inline-end;
+    height: 90vh;
+    margin: 0;
+}
+
+.perfil-article {
+    position:absolute;
+    top: 12rem;
+    left: 40%;
+    margin: 2rem;
+    width: 70rem;
+}
+
+.perfil-h1 {
+    font-size: 4rem;
+    color: rgb(26, 16, 160);
+    margin: 0;
+}
+
+.perfil-h2 {
+    margin: 0.5%;
+}
+
+.perfil-h2 > a {
+    color: black;
+    font-size: 1.1rem;
+}
+
+#perfil-description {
+    margin-top: 4rem;
+}
+
+.perfil-section {
+    Position: absolute;
+    top: 70%;
+    left: 40%;
+    width: 50%;
+}
+
+.perfil-a > img {
+    width: 3rem;
+    padding: 0.5rem;
+    margin-left: 2rem;
+}
+
+#perfil-ol {
+    text-decoration: none;
+}
+
+#despertar-body {
+    display: absolute;
+    left: 40%;
+    top: 40%;
+    width: 50%;
+    height: 50%;
+}
+.despertar-div {
+    width: 50%;
+    height: 50%;
+    background-color: black;
+}

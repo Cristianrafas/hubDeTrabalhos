@@ -1,0 +1,17 @@
+<script>
+        function perfect (numero){
+        if (numero <= 1) {
+            return false;
+        }
+
+        let somaDivisores = 1;
+
+        for (let i = 2; i < numero; i++){
+            if (numero % i === 0)
+            {somaDivisores += i;}
+        }
+
+    return somaDivisores === numero;
+    }
+    console.log(perfect(27))
+</script>

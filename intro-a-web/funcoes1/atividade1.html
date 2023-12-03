@@ -1,0 +1,17 @@
+<script>
+    let resultado = 0;
+    function media (nota1, nota2, nota3, tipo){
+        if (tipo === 'A'){
+            resultado = (nota1 + nota2 + nota3) / 3;
+            return resultado
+        } else if (tipo === 'P'){
+            resultado = ((nota1 * 5) + (nota2 * 3) + (nota3 * 2)) / 10;
+            return resultado
+        } else {alert('Digite A ou P para selecionar o tipo de média')}
+    }
+    let nota1 = Number(prompt('Digite a primeira nota: '))
+    let nota2 = Number(prompt('Digite a segunda nota: '))
+    let nota3 = Number(prompt('Digite a terceira nota: '))
+    let tipo = prompt('Digite A para média Aritmética e P para média Ponderada: ');
+    console.log(media(nota1, nota2, nota3, tipo))
+</script>

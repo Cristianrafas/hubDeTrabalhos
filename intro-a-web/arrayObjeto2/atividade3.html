@@ -1,0 +1,45 @@
+<script>
+    let continuar = true;
+    let pessoas = [];
+    let empregadas = [];
+    let desempregadas = [];
+    let maioresSalarios = [];
+    let menoresSalarios = [];
+
+    function cadastrar(){
+        let nome = prompt('Digite o nome da pessoa: ');
+        let idade = Number(prompt('Digite a idade da pessoa:'));
+        let trabalhando = confirm('Pessoa trabalha?')
+        let salario = 0;
+        trabalhando ? salario = Number(prompt('Digite o salário da pessoa:')) : salario = null;
+
+        pessoas.push({nome, idade, trabalhando, salario});
+    }
+
+    while(continuar) {
+        cadastrar();
+        continuar = confirm('Deseja cadastrar mais uma pessoa?')
+    }
+    
+    empregadas = pessoas.filter(pessoa => pessoa.trabalhando);
+    desempregadas = pessoas.filter(pessoa => !pessoa.trabalhando);
+    maioresSalarios = empregadas.filter(pessoa => pessoa.salario >= 2500);
+    menoresSalarios = empregadas.filter(pessoa => pessoa.salario < 2500);
+
+    document.write(`<strong>Pessoas desempregadas:<br></strong>`)
+    desempregadas.forEach(objeto => {
+        document.write(`Nome: ${objeto.nome},`)
+        document.write(` Idade: ${objeto.idade}<br>`)
+    });
+    document.write(`<br><strong>Pessoas empregadas com salários menores que 2500:<br></strong>`)
+    menoresSalarios.forEach(objeto => {
+        document.write(`Nome: ${objeto.nome},`)
+        document.write(` Idade: ${objeto.idade}<br>`)
+    });
+    document.write(`<br><strong>Pessoas empregadas com salários maiores que 2500:<br></strong>`)
+    maioresSalarios.forEach(objeto => {
+        document.write(`Nome: ${objeto.nome},`)
+        document.write(` Idade: ${objeto.idade}<br>`)
+    });
+
+</script>

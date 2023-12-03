@@ -1,0 +1,110 @@
+<script>
+    let payTotal = 0;
+    const data = [
+{
+nome: 'Roger Medeiros',
+sexo: 'M',
+salario: 3250,
+},
+{
+nome: 'Carolina Silva',
+sexo: 'F',
+salario: 1200,
+},
+{
+nome: 'Cristina Avila',
+sexo: 'F',
+salario: 8100,
+},
+{
+nome: 'Gustavo Hoffman',
+sexo: 'M',
+salario: 5200.35,
+},
+{
+nome: 'Eva Trindade',
+sexo: 'F',
+salario: 2501,
+},
+{
+nome: 'Andre Mathias',
+sexo: 'M',
+salario: 1750,
+},
+{
+nome: 'Joice Castro da Silva',
+sexo: 'F',
+salario: 3350.25,
+},
+];
+
+function total(){
+    console.log(`Total de pessoas: ${data.length}`);
+}
+
+function female(){
+    const female = data.filter(data => data.sexo === 'F')
+    return female;
+}
+
+function male(){
+    const male = data.filter(data => data.sexo === 'M');
+    return male;
+}
+
+function payMale(){
+    let payMaleTotal = 0
+    male().forEach(male => {
+        payMaleTotal += male.salario;});
+    return payMaleTotal;
+}
+
+function payMaleMed(){
+    return maleMed = payMale() / male().length;
+}
+
+function paySum() {
+    data.forEach(person => {
+        payTotal += person.salario;
+    });
+    return payTotal.toFixed(2);
+}
+
+function payMed(){
+    const med = payTotal / data.length;
+    return med.toFixed(2);
+}
+
+function payMasc(){
+    const payMasc = data.filter()
+}
+
+function pay7000(){
+    return data.some(data => data.salario > 7000)
+}
+
+function findEva(){
+    return data.findIndex(data => data.nome === "Eva Trindade")
+}
+function filterSilva() {
+    const personSilva = data.filter(person => person.nome.includes('Silva'));
+    return console.log('Pessoas com o sobrenome Silva:', personSilva);
+}
+function printAllNames() {
+    const allNames = data.map(person => person.nome);
+    console.log('Todos os nomes:', allNames);
+}
+
+total();
+console.log(`Total de funcionárias: ${female().length}`);
+console.log(`Total de soma dos salários: R$${paySum()}`);
+console.log(`A média dos salários: R$${payMed()}`);
+console.log(`A soma dos salários Masculinos: R$${payMale()}`);
+console.log(`A média dos salários Masculinos: R$${payMaleMed().toFixed(2)}`);
+console.log(pay7000());
+console.log(findEva());
+filterSilva();
+printAllNames();
+
+
+</script>

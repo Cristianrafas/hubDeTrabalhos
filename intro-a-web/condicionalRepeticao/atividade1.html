@@ -1,0 +1,17 @@
+<script>
+let alunos = 0;
+let total = 0;
+let exit = false;
+let idade = 0;
+
+for (let i = 0; exit == false; i++) {
+    idade = Number(prompt('Digite uma idade:'));
+    if (idade != 999){
+        alunos++;
+        total += idade;
+    } else {
+        exit = true;
+    }
+}
+document.write(`Existem ${alunos} alunos e a média de idade é ${total / alunos}`)
+</script>

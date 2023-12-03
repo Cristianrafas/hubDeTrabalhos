@@ -1,0 +1,14 @@
+<script>
+    let preço = Number(prompt('Ditige o valor de tabela: '));
+    let modalidade = Number(prompt('Digite a quantidade de vezes do pagamento: '));
+
+    if (modalidade == 1) {
+        document.write(`Parabéns,você receberá um desconto de 2,5% pelo pagamento a vista e irá pagar: R$${(preço - (preço* 0.025)).toFixed(2)}`)
+    } else if (modalidade >= 2 && modalidade <= 5) {
+        document.write(`Você pagará R$${preço}`)
+    } else if (modalidade >= 6 && modalidade <= 10) {
+        document.write(`Nessa modalidade você irá pagar: ${(preço + (preço * 0.06)).toFixed(2)}`)
+    } else if (modalidade >= 11 && modalidade <= 15) {
+        document.write(`Nessa modalidade você irá pagar: ${(preço + (preço * 0.13)).toFixed(2)}`)
+    } else {document.write('Parcelamento inválido!')}
+</script>

@@ -1,0 +1,100 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 2%
+}
+
+aside {
+    background-color: rgb(26, 16, 160);
+    float:inline-start;
+    height: 90vh;
+    width: 15%;
+    margin: 0;
+    position: relative;
+}
+
+main {
+    background-color: rgb(148, 139, 139);
+    float:inline-end;
+    height: 90vh;
+    width: 85%;
+    margin: 0;
+}
+
+.foto_perfil {
+    width: 10rem;
+    height: 10rem;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    border-radius: 50%;
+    border: 5px rgb(136, 136, 153) solid;
+}
+
+.selected{
+    color:rgb(226, 222, 217);
+}
+
+nav{
+    position:absolute;
+    top: 60%;
+    left: 40%;
+    transform:translate(-50%, 0);
+    text-align: center;
+}
+
+li > a {
+    text-decoration: none;
+    color:rgb(160, 148, 148);
+}
+
+.navli {
+    padding: 0.5rem;
+    list-style-type: none; 
+}
+
+article {
+    position:absolute;
+    top: 12rem;
+    margin: 2rem;
+    width: 70rem;
+}
+
+h1 {
+    font-size: 4rem;
+    color: rgb(26, 16, 160);
+    margin: 0;
+}
+
+.name {
+    color:black;
+}
+
+h2 {
+    margin: 0;
+}
+
+h2 > a{
+    color: black;
+    font-size: 1.1rem;
+}
+
+#description{
+    margin-top: 4rem;
+}
+
+section {
+    Position: absolute;
+    top: 70%;
+}
+a > img {
+    width: 3rem;
+    padding: 0.5rem;
+    margin-left: 2rem;
+}
+ol {
+    text-decoration: none;
+}

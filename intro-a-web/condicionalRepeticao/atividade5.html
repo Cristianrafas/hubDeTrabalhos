@@ -1,0 +1,10 @@
+<script>
+    let distancia = Number(prompt('Digite a distancia da viagem: '))
+
+    if (distancia <= 200) {
+        document.write(`Sua viagem vai custar: R$${(distancia / 2).toFixed(2)}`)
+    } else {
+        document.write(`Sua viagem vai custar: R$${(distancia * 0.45).toFixed(2)}`)
+    }
+
+</script>

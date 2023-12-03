@@ -1,0 +1,13 @@
+<script>
+    let largura = Number(prompt('Digite a largura do terreno: '));
+    let comprimento = Number(prompt('Digite o comprimento do terreno: '));
+    let area = largura * comprimento;
+
+    if (area < 100) {
+        document.write(`Seu terreno tem ${area}m² então está enquadrado em TERRENO POPULAR`)
+    } else if (area > 100 && area < 500) {
+        document.write(`Seu terreno tem ${area}m² então está enquadrado em TERRENO MASTER`)
+    } else {
+        document.write(`Seu terreno tem ${area}m² então está enquadrado em TERRENO VIP`)
+    }
+</script>

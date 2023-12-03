@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
+
+* { 
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(206, 198, 186);
+}
+
+header{
+    margin-bottom: 0;
+}
+
+h1 {
+    color: black;
+    font-size: 40px;
+    background-color: gray;
+    margin: 0 40px;
+    width: 1205px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    display:inline-block;
+    margin-top: 50px;
+    margin-left: 500px;
+}
+
+h3 {
+    font-size: 25px;
+    text-align: center;
+    background-color: grey;
+}
+
+li {
+    padding: 20px 100px;
+    list-style-type: none;
+    float: left;
+    background-color:grey;
+    font-size: 20px;
+    font-weight: bold;
+}
+ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+a {
+    text-decoration: none;
+    background-color: grey
+}
+
+a:visited {
+    color:rgba(118, 45, 118, 0.679)
+}
+
+li:hover, li:hover a {
+    background-color: rgb(22, 82, 165);
+    padding: 10px, 100px;
+}
+
+.section {
+    background-color: grey;
+    margin: 50px 300px 50px 300px;
+    width: 600px;
+    height: 400px;
+    position: relative;
+}
+
+#primeiro-1 {
+    width: 400px;
+    height: 390px;
+    background-color: blue;
+    position: relative;
+    left: 100px;
+    top: 5px;
+}
+
+#primeiro-2 {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    position: relative;
+    left: 50px;
+    top: 50px;
+}
+
+#primeiro-3 {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    position: relative;
+    left: 50px;
+    top: 50px;
+}
+
+#primeiro-4 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: relative;
+    left: 50px;
+    top: 50px;
+}
+
+#primeiro-5 {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    position: relative;
+    left: 25px;
+    top: 25px;
+}
+
+.div2 {
+    height: 140px;
+    width: 140px;
+    position: absolute;
+    background-color: black;
+}
+
+#segundo-1 {
+    left: 0;
+    top: 0;
+}
+
+#segundo-2 {
+    right: 0;
+    top: 0;
+}
+
+#segundo-3 {
+    right: 0;
+    bottom: 0;
+}
+
+#segundo-4 {
+    left: 0;
+    bottom: 0;
+}
+
+#section-3 {
+    background-color: grey;
+    margin: 50px 300px 50px 300px;;
+    width: 540px;
+    height: 400px;
+    padding: 30px;
+}
+
+#terceiro-1 {
+    font-size: 18px;
+    text-align: end;
+    background-color: black;
+    display: block;
+    color: rgb(184, 180, 180);
+    border-radius: 25px;
+    padding: 15px;
+}
+
+#terceiro-2 {
+    font-size: 20px;
+    margin-top: 15px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: black;
+    color: rgb(184, 180, 180);
+    height: 150px;
+    border: 2px solid red;
+    margin-top: 25px;
+}
+
+.div4 {
+    height: 76px;
+    width: 76px;
+    background-color: black;
+    position:absolute;
+}
+
+#quarto-2 {
+    left: 81px;
+}
+
+#quarto-3 {
+    left: 162px;
+}
+
+#quarto-4 {
+    top: 81px;
+}
+
+#quarto-5 {
+    left: 81px;
+    top: 81px;
+}
+
+#quarto-6 {    
+    top: 162px;
+}
+
+#quarto-7 {
+    bottom: 0;
+    right: 0;
+}
+
+#quarto-8 {
+    bottom: 0;
+    right: 81px;
+}
+
+#quarto-9 {
+    bottom: 0;
+    right: 162px;
+}
+
+#quarto-10 {
+    bottom: 81px;
+    right: 0;
+}
+
+#quarto-11 {
+    bottom: 81px;
+    right: 81px;
+}
+
+#quarto-12 {
+    bottom: 162px;
+    right: 0;
+}
+
+footer {
+    background-color: grey;
+    width: 1205px;
+    margin: 0 40px;
+}

@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0.50%;
+    background-color: rgb(238, 247, 247);
+}
+
+.header {
+    background-color: rgb(238, 247, 247);
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid rgb(122, 125, 125);
+    position: fixed;
+    z-index: 1;
+}
+
+.topNavBar {
+    background-color: rgb(238, 247, 247);
+    width: 50%;
+    height: 19%;
+    display:inline-block;
+}
+.linkHover:hover{
+    color: #302a85; 
+    text-decoration: underline;
+}
+
+.iconeCaderno{
+    width: 2.2%;
+    height: 2.2%;
+    margin-left: 2%;
+    margin-top: 1.2%;
+}
+.navBarLink{
+    text-decoration: none; 
+    color: black;
+    transition: color 0.3s ease; 
+    position: relative;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.menuHub {
+    width: 1.5%;
+    height: 40%;
+    position: absolute;
+    top: 25%;
+    right: 1%;
+    background-color: rgba(35, 207, 207, 0);
+}
+
+
+.aside {
+    margin: 0;
+    width: 20%;
+    height: 100vh;
+    background-color: rgb(238, 247, 247);
+    position: fixed;
+    left: 0;
+    top: 11%;
+    border-right: 1px solid rgb(122, 125, 125);
+}
+
+.asideNavLink {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+
+.asideNavLink a {
+    text-decoration: none;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    display: block;
+}
+
+.asideNavLink li {
+    font-size: large;
+    font-weight: 600;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    overflow-block: auto;
+}
+
+.asideNavLink a:hover {
+    background-color: rgba(138, 134, 134, 0.1);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 90%;  
+}
+
+.icon {
+    width: 10%;
+    height: 10%;
+    margin-left: 10%;
+    float: left;
+    object-fit: contain;
+    mix-blend-mode:darken;
+}
+.main-home {
+    float:inline-end;
+    text-align: center;
+    margin: 8%;
+    overflow-block: auto;
+    padding-left: 20%;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 2%;
+    width: 10%;
+}
+/* Cursos */
+
+.cursos-card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 45%;
+    top: 25%;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border-radius: 30px 30px 0 0;
+    text-decoration: none;
+}
+
+.card-img {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border-radius: 30px 30px 0 0;
+}
+
+.card-background {
+    background-color: #cfc7c7;
+}
+
+.cursos-card:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.cursos-card:link {
+    color: black;
+}
+.cursos-card:visited {
+    color:black;
+}
+.cursos-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.cursos-card:hover::before {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}
+
+/* Despertar */
+
+#despertar-main {
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    width: 70%;
+    height: 80%;
+}
+
+.despertar-module-card {
+    border-radius: 8px;
+    position:relative;
+    left: 15%;
+    top: 25%;
+    width: 50rem;
+    height: 3rem;
+    text-align: center;
+    border-radius: 30px 30px 0 0;
+    text-decoration: none;
+    background-image: url(assets/module-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.module-card-title {
+    background: none;
+    color:rgb(214, 206, 206);
+    padding: 0.6rem;
+}
+
+.despertar-ativity-card {
+    position:relative;
+    left: 15%;
+    top: 26%;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+    margin-top: -10px;
+}
+
+.despertar-ativity-card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do card ao passar o mouse */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave */
+    z-index: 1;
+}
+
+.despertar-ativity-div {
+    width: 49.9rem;
+    height: 7rem;
+    display: flex;
+    border: solid 0.5px black;
+    position: relative;
+}
+
+.ativity-img {
+    max-width: 8rem;
+    min-width: 8rem; 
+    height: 7rem;
+    text-align: start;
+}
+
+.ativity-card-title {
+    position: relative;
+    left: 10rem;
+    top: 0.5rem;
+    text-align: left;
+    height: 3rem;
+    min-width: 25rem;
+}
+
+.ativity-card-descrition {
+    position: relative;
+    top: 3.8rem;
+    right: 20rem;
+    text-align: left;
+    height: 3rem;
+    min-width: 30rem;
+}
+
+.last {
+    border-radius:0 0 30px 30px;
+}
+
+.last-img {
+    border-radius:0 0 0 30px;
+}
+
+.margin-bottom {
+    height: 5rem;
+}

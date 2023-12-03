@@ -1,0 +1,18 @@
+<script>
+    let a = Number(prompt('Informe o lado A do triangulo: '))
+    let b = Number(prompt('Informe o lado B do triangulo: '))
+    let c = Number(prompt('Informe o lado C do triangulo: '))
+
+    if (a < (b + c) && b < (a + c) && c < (a + b)) {
+        if (a == b && b == c) {
+            console.log('É um triângulo Equilátero!');
+        } else if (a == b || a == c || b == c) {
+        console.log('É um triângulo Isósceles!');
+        } else if (a != b && a != c && b != c) {
+            console.log('É um triângulo Escaleno!');
+        } 
+    }
+    else {
+        console.log('Não é possível formar um triângulo!')
+    }
+</script>

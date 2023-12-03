@@ -1,0 +1,13 @@
+<script>
+    let nome = prompt('Digite o nome do(a) cliente:')
+    let sexo = prompt('Digite o sexo F ou M:')
+    let valor = Number(prompt('Digite o valor das compras: '))
+
+    if (sexo == 'F') {
+        document.write(`Sua compra senhora ${nome} de R$${(valor).toFixed(2)}, saiu por R$${(valor * 0.87).toFixed(2)}`)
+    } else if (sexo == 'M') {
+        document.write(`Sua compra senhor ${nome} de R$${(valor).toFixed(2)}, saiu por R$${(valor * 0.95).toFixed(2)}`)}
+    else {
+        document.write(`Digite um sexo válido!`);
+    }
+</script>

@@ -1,0 +1,29 @@
+<script>
+    let nomes = ['Rafael', 'Ricardo', 'Nicole', 'Julia']
+
+    for (let i = 0; i < nomes.length; i++) {
+        document.write(`${nomes[i]} <br>`);
+    }
+
+    let numeros = [3 , 12 , 15, 20, 50]
+    let total = 0
+
+    for (numero of numeros){
+        total += numero;
+    }
+    document.write(`${total} <br>`);
+
+    let frutas = ['Maçã', 'Banana', 'Uva'];
+    document.write(`${frutas} <br>`)
+    frutas.push('Pera');
+    document.write(`${frutas} <br>`)
+    frutas.pop();
+    document.write(`${frutas} <br>`)
+    frutas.unshift('Melancia');
+    document.write(`${frutas} <br>`)
+    frutas.shift();
+    document.write(`${frutas} <br>`)
+    for (fruta of frutas){
+        document.write(fruta);
+    }
+</script>

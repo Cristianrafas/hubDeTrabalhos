@@ -1,0 +1,12 @@
+<script>
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9 , 10]
+    const number = Number(prompt('Digite um número: '))
+    let acertou = false;
+
+    for (let i = 0; i < numbers.length; i++) { 
+        if (number == numbers[i]){
+            acertou = true; 
+            break}
+    }
+    console.log(acertou ? 'Parabéns! Você digitou um número que estava na lista!' : 'Você errou!');
+</script>

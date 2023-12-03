@@ -1,0 +1,17 @@
+<script>
+
+    numPer = [];
+
+    for (let num = 1; numPer.length < 4 ; num++){
+        let soma = 0
+        for (let i = 1; i < num; i++){
+            if (num % i === 0) {
+                soma += i;
+            }
+        }
+    if (soma == num) {
+        numPer.push(soma);
+    }
+    }
+    console.log(`${numPer}  `)
+</script>

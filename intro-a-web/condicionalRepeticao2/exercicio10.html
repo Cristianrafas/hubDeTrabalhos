@@ -1,0 +1,13 @@
+<script>
+    let altura = Number(prompt('digite sua altura: '));
+    let sexo = Number(prompt('Ditite 1 para feminino e 2 para masculino: '));
+    let pesoIdeal = 0;
+    
+    if (sexo == 1) {
+        pesoIdeal = (62.1 * altura) - 44.7
+    } else if (sexo == 2) {
+        pesoIdeal = (72.7 * altura) - 58}
+    else {document.write('Digite um número válido correspondente ao sexo!')}
+    
+    document.write(`Seu peso ideal seria: ${pesoIdeal.toFixed(2)}`);
+</script>

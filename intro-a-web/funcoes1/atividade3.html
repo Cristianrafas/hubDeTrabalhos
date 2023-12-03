@@ -1,0 +1,22 @@
+<script>
+    let primo = true;
+    let result = "";
+
+    function eprimo(value) {
+        if (value === 2) {
+            result = 'É primo!'
+        }
+        for (let i = 2; i < value; i++) {
+            if (i != value) {
+                if (value % i === 0) {
+                    result = 'Não é primo!';
+                    break;
+                } else {
+                    result = 'É primo!'
+                };
+            }
+        }
+    }
+    eprimo(9);
+    console.log(result);
+</script>

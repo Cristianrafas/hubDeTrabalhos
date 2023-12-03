@@ -1,0 +1,14 @@
+<script>
+    let total = Number(prompt('Digite o valor total de eleitores: '));
+    let brancos = Number(prompt('Digite o total de votos brancos: '));
+    let nulos = Number(prompt('Digite o total de votos nulos: '));
+    let validos = Number(prompt('Digite o total de votos validos: '));
+
+    if (total >= brancos + nulos + validos) {
+        document.write(`%${brancos/total * 100} de votos foram em branco <br>`)
+        document.write(`%${nulos/total * 100} de votos foram nulos <br>`)
+        document.write(`%${validos/total * 100} de votos foram válidos <br>`)
+    } else {
+        document.write('Número total de eleitores menor que o total de votos!')
+    }
+</script>

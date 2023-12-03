@@ -1,0 +1,51 @@
+<script>
+    let pessoas = [];
+    let continuar = true;
+
+    while (continuar) {
+        const nome = prompt('Digite o nome da pessoa: ');
+        const idade = Number(prompt('Digite a idade: '));
+        const trabalha = confirm('A pessoa trabalha?');
+        let salario = 0;
+        if (trabalha) {
+            salario = Number(prompt('Digite o salário: '));
+        }
+        const pessoa = { nome, idade, trabalha, salario };
+        pessoas.push(pessoa);
+
+        continuar = confirm('Deseja cadastrar mais?');
+    }
+    let desempregados = [];
+    let empregadosMenor2500 = [];
+    let empregadosMaior2500 = [];
+    console.log(pessoas)
+    for (const pessoa of pessoas) {
+        if (!pessoa.trabalha) {
+            desempregados.push(pessoa); continue
+        } else {
+            if (pessoa.salario <= 2500) {
+                empregadosMenor2500.push(pessoa);
+            } else {
+                empregadosMaior2500.push(pessoa);
+            }
+        }
+    }
+
+    console.log("Pessoas desempregadas:");
+    for (let i = 0; i < desempregados.length; i++) {
+        const pessoa = desempregados[i];
+        console.log(`Nome: ${pessoa.nome} | Idade: ${pessoa.idade}`);
+    }
+
+    console.log("Pessoas empregadas com salários menores que 2500:");
+    for (let i = 0; i < empregadosMenor2500.length; i++) {
+        const pessoa = empregadosMenor2500[i];
+        console.log(`Nome: ${pessoa.nome} | Idade: ${pessoa.idade} | Salário: ${pessoa.salario}`);
+    }
+
+    console.log("Pessoas empregadas com salários maiores ou iguais a 2500:");
+    for (let i = 0; i < empregadosMaior2500.length; i++) {
+        const pessoa = empregadosMaior2500[i];
+        console.log(`Nome: ${pessoa.nome} | Idade: ${pessoa.idade} | Salário: ${pessoa.salario}`);
+    }
+</script>

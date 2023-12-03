@@ -1,0 +1,13 @@
+<script>
+    const idadeMotorista = Number(prompt('Digite a idade do motorista: '));
+    
+    if (idadeMotorista >= 18) {
+        const habilitado = confirm('É habilitado?');
+        if (habilitado) {
+            console.log ('Pode dirigir');
+        } else
+        console.log ('Não pode dirigir');
+    } else {
+        console.log ('Não pode dirigir');
+    }
+</script>

@@ -1,0 +1,11 @@
+<script>
+    let nascimento = Number(prompt('Digite que ano você nasceu: '));
+    let anoAtual = new Date();
+    let idade = anoAtual.getFullYear() - nascimento;
+
+        if (idade >= 18) {
+            console.log('Você já pode votar!')
+        } else {
+            console.log('Você ainda não pode votar!')
+        }
+</script>

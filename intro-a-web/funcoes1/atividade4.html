@@ -1,0 +1,18 @@
+<script>
+    let seg = 0;
+    let min = 0;
+    let hora = 0;
+
+    function emHora (value) {
+        hora = (value / 3600).toFixed(0);  // Calcula as horas
+        value %= 3600;  // Atualiza o valor para o restante
+
+        min = (value / 60).toFixed(0);  // Calcula os minutos
+        value %= 60;  // Atualiza o valor para os segundos
+
+        seg = value.toFixed(0);  // O
+        return console.log(`${hora} :  ${min} : ${seg}`)
+    }
+
+    emHora (54062)
+</script>

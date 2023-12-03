@@ -1,0 +1,78 @@
+body {
+    background-color: rgb(47, 123, 173);
+}
+#background {
+    background-image: url("./imagem.png");
+    background-size: 100% 100%;
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    left: 10%;
+    top: 5%;
+}
+
+#conteudo   {
+    position: absolute;
+    left: 41%;
+    top: 62%;
+    width: 20%;
+    height: 20%;
+    background-color: rgb(6, 6, 48);
+}
+
+#saque {
+    position: absolute;
+    left: 43%;
+    top: 80%;
+    width: 15%;
+    height: 9%;
+    background-color: rgb(127, 127, 167);
+}
+
+h2 {
+    text-align: center;
+    margin: 1%;
+    color: rgb(201, 192, 192);
+}
+
+#input {
+    border-radius: 15px;
+    width: 90%;
+    margin-inline: 4%;
+}
+
+#button {
+    margin-top: 5px;
+    margin-inline: 25%;
+    width: 50%;
+    
+}
+
+p {
+    font-weight: 700;
+    color: rgb(223, 218, 215);
+    text-align: center;
+}
+
+img {
+    width: 35px;
+    height: 35px;
+    margin-left: 16px;
+}
+
+span {
+    font-weight: bolder;
+}
+
+#var1 {
+    margin-left: 14%;
+}
+#var2 {
+    margin-left: 20%
+}
+#var3 {
+    margin-left: 21%
+}
+#var4 {
+    margin-left: 17%
+}
