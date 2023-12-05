@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Prática - Manipulação do DOM 1</title>
+</head>
+
+<body>
+    <button onclick="mudaText()">CLIQUE AQUI PARA MUDAR O TEXTO</button>
+    <p id="muda-texto">AQUI VAI APARECER ALGUMA COISA...</p>    
+    <a href = './atividade2.html'>Atividade 2</a>
+
+</body>
+
+</html>
+<script>
+    function mudaText() {
+        const nome = prompt('Digite seu nome')
+        let mudaTexto = document.querySelector('#muda-texto').innerText = `E aí ${nome} você está deixando seu site dinâmico`
+    }
+</script>
