@@ -1,69 +1,29 @@
-const formNovoUsuario = document.getElementById('form')
-const nomeUsuario = document.getElementById('name')
-const senhaUsuario = document.getElementById('senha')
-const emailUsuario = document.getElementById('email')
-let listaUsuarios = [];
+const formNewUser = document.getElementById('form-new-user')
 
-formNovoUsuario.addEventListener('submit', (event) => {
-      event.preventDefault()
+const nameInput = document.getElementById('name')
+const emailInput = document.getElementById('email')
+const passwordInput = document.getElementById('password')
 
-      if (nomeUsuario.value.length < 4) {
-            nomeUsuario.classList.add('error')
-      } else if (senhaUsuario.value === '') {
-            senhaUsuario.classList.add('error')
-      } else if (emailUsuario.value === '') {
-            emailUsuario.classList.add('error')
-      }
-      else {
-            nomeUsuario.classList.add('success')
-            senhaUsuario.classList.add('success')
-            emailUsuario.classList.add('success')
-            const nomeValue = nomeUsuario.value
-            const senhaValue = senhaUsuario.value
-            const emailValue = emailUsuario.value
+formNewUser.addEventListener('submit', (e) => {
+  e.preventDefault() // impedir comportamento padrão do submit
 
-            const novoUsuario = {
-                  name: nomeValue,
-                  avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/3.jpg",
-                  password: senhaValue,
-                  login: emailValue,
-            }
-            
-            listaUsuarios = JSON.parse(
-                  localStorage.getItem('listaUsuarios')     
-            );
-            
-            listaUsuarios.push({
-                  name: nomeValue,
-                  avatar:"https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/3.jpg",
-                  password: senhaValue,
-                  login: emailValue,
-            })
+  const newUser = {
+    name: nameInput.value,
+    email: emailInput.value,
+    password: passwordInput.value,
+  }
 
-            localStorage.setItem('listaUsuarios', JSON.stringify(listaUsuarios));
-
-
-            createNewUser(novoUsuario);
-      }
-
-
+  addNewUser(newUser)
 })
 
-async function createNewUser(user) {
-      try {
-            const response = await api.post('/users', user);
+async function addNewUser(newUser) {
+  try {
+    const response = await api.post('/users/signup', newUser)
 
-            if (response.status === 201) {
-                  alert('Usuario cadastrado com sucesso!')
-
-                  senhaUsuario.value = ""
-                  nomeUsuario.value = ""
-                  emailUsuario.value = ""
-
-                  location.href = "index.html"
-            }
-
-      } catch (error) {
-            console.log('Erro ao cadastrar usuario', error)
-      }
+    if (response.status === 201) {
+      location.href = "index.html"
+    }
+  } catch (error) {
+    console.log('Erro ao cadastrar usuário', error)
+  }
 }
