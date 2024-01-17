@@ -6,27 +6,6 @@
   <title>Document</title>
 </head>
 <body>
-  <!-- <form>
-    <label for="nome">Nome:</label>
-    <input required id="nome" type="email" placeholder="carla@gmail.com" disabled />
-
-    <label for="senha">Senha:</label>
-    <input required type="password" id="senha" maxlength="5"/>
-
-    <label for="idade">Sua idade:</label>
-    <input type="number" id="idade" />
-
-    <label for="curriculo">Currículo:</label>
-    <input type="file" id="curriculo" />
-
-    <label for="cor-favorita">Cor favorita:</label>
-    <input type="color" id="cor-favorita" />
-
-    <input type="hidden" id="id" />
-
-    <button type="submit">Enviar</button>
-  </form> -->
-
   <form>
     <fieldset>
       <legend>Informações pessoais</legend>
@@ -74,48 +53,5 @@
 
     <button>Cadastrar</button>
   </form>
-  
-  <!-- <form id="interessesForm">
-    <fieldset>
-      <legend>Interesses</legend>
-
-      <input id="esporte" type="checkbox" name="interesses" />
-      <label for="esporte">Esporte</label>
-
-      <input id="tecnologia" type="checkbox" name="interesses" />
-      <label for="tecnologia">Tecnologia</label>
-    </fieldset>
-
-    <span>Escolha pelo menos um interesse</span>
-
-    <button type="submit">Enviar</button>
-  </form>
-  <script>
-    const form = document.getElementById('interessesForm')
-    const span = document.querySelector('span')
-
-    form.addEventListener('submit', (event) => {
-      const checkboxes = document.querySelectorAll('input[name="interesses"]:checked')
-      console.log(checkboxes)
-
-      if (checkboxes.length === 0) {
-        event.preventDefault()
-
-        span.classList.add('error')
-      }
-    })
-  </script>
-
-  <style>
-    span {
-      display: none;
-    }
-
-    .error {
-      color: red;
-      padding: 10px 0;
-      display: block;
-    }
-  </style> -->
 </body>
 </html>

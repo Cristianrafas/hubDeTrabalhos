@@ -58,27 +58,7 @@ a {
   letter-spacing: -0.5px;
 }
 
-.form-control {
-  margin-bottom: 10px;
-  padding-bottom: 20px;
-  position: relative;
-}
 
-.form-control label {
-  color: #495057;
-  font-size: .875rem;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-.form-control input,
-.form-control textarea {
-  padding: 0px 12px;
-  border-radius: 16px;
-  border: 1px solid #ADB5BD;
-  background: #FFF;
-  width: 100%;
-}
 
 .form-control input {
   height: 3rem;
