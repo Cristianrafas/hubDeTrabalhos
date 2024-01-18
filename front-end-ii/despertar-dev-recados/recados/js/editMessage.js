@@ -18,7 +18,7 @@ async function populateEditForm() {
   } catch (error) {
     console.log('Erro ao buscar recado', error)
   }
-}
+};
 
 populateEditForm()
 
