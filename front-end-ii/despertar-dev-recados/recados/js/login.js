@@ -1,17 +1,19 @@
-const formLogin = document.getElementById('form-login')
+const formLogin = document.getElementById('form-login');
 
-const emailInput = document.getElementById('email-login')
-const passwordInput = document.getElementById('password-login')
+const emailInput = document.getElementById('email-login');
+const passwordInput = document.getElementById('password-login');
 
 formLogin.addEventListener('submit', (e) => {
-  e.preventDefault() // impedir comportamento padrão do submit
+  e.preventDefault();
 
   const data = {
     email: emailInput.value,
     password: passwordInput.value,
   }
 
-  login(data)
+  if (emailInput.value && (passwordInput.value).length >= 6) {
+    login(data);
+  }
 })
 
 async function login(data) {
@@ -25,7 +27,6 @@ async function login(data) {
       location.href = "listar-recados.html"
     }
   } catch (error) {
-    console.log('Erro ao fazer login', error)
+    setAlert("Falha de login, verifique suas credências!", 'danger');
   }
 }
-

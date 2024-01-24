@@ -13,54 +13,57 @@
     rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <style>
-    .logo {
-      width: 17rem;
-      height: 12rem;
-    }
-    .formBox {
-      width: 40rem;
-      height: 16rem;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <div class="row">
-    <div class="col text-center">
-      <img class="logo" src="./images/logo.svg" alt="">
-      <h1 class="title">Comece já!</h1>
-      <h2 class="subtitle">
+  <div class="container" style="width: 600px;">
+    <header class="row">
+      <img class="m-auto my-5" src="./images/logo.svg" alt="" style="max-width: 200px;">
+
+      <h2 class="fs-2 text-center">
         Cadastre seu recado
       </h2>
-    </div>
-  </div>
-  <div class="row justify-content-center align-items-center mt-5">
-    <div class="col-12 formBox p-3 border rounded border-secondary">
-      <form class="my-form" id="form-new-message">
-        <div class="mb-3">
-          <label for="title" class="form-label">Título</label>
-          <input type="text" class="form-control" id="title" aria-describedby="emailHelp"
-            placeholder="Insira um título para o recado">
+    </header>
+
+    <main>
+      <form id="form-new-message" class="needs-validation" novalidate>
+        <div class="bg-transparent">
+          <label for="title">Título</label>
+          <input required class="form-control" id="title" type="text" placeholder="Insira um título para o recado" aria-label="default input example">
+            <div class="invalid-feedback">
+              Por favor forneça um título!
+            </div>
         </div>
-        <div class="mb-3">
+
+        <div class="my-3">
           <label for="description" class="form-label">Descrição</label>
-          <input type="password" class="form-control" id="description" placeholder="Insira uma descrição para o recado">
+          <textarea required id="description" placeholder="Insira uma descrição para o recado" class="form-control" rows="3"></textarea>
+          <div class="invalid-feedback">
+            Por favor forneça uma descrição!
+          </div>
         </div>
-        <div class="col-12 d-flex justify-content-center align-items-center">
-          <button class="btn btn-success justify-content-center mt-1 me-3">Cadastrar Recado</button>
-          <button class="btn btn-danger opacity-75 mt-1 ms-3" type="reset">Resetar</button>
+
+        <div class="container">
+          <div class="row">
+            <button class="btn btn-primary" type="submit">Cadastrar Recado</button>
+          </div>
+          <div class="row mt-3">
+            <button class="btn btn-danger" type="reset">Resetar</button>
+          </div>
         </div>
       </form>
-    </div>
+    </main>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="js/api.js"></script>
   <script src="js/newMessage.js"></script>
   <script src="js/scripts.js"></script>
+  <script src="js/validationForms.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -13,7 +13,6 @@ async function fetchMessages(page) {
 
     if (!userId) {
       alert("Você precisa fazer login para visualizar os recados.")
-
       return
     }
 
@@ -25,7 +24,6 @@ async function fetchMessages(page) {
     const response = await api.get(`/notes/${userId}`, { params })
     const messages = response.data.userMessages
 
-    console.log(messages)
 
     totalPages = response.data.totalPages
 
@@ -34,49 +32,48 @@ async function fetchMessages(page) {
     messages.forEach(message => {
       const messageCard = document.createElement('div')
       messageCard.classList.add('card')
+      messageCard.classList.add('p-3')
+      messageCard.classList.add('row')
 
       messageCard.innerHTML = `
-        <h2 class="card-title">${message.title}</h2>
-        <p class="card-description">${message.description}</p>
+        <h2 class="fs-5 fw-bold">${message.title}</h2>
+        <p class="text-secondary">${message.description}</p>
         <div class="card-icons">
-          <i class="fas fa-solid fa-trash" data-id=${message.id}></i>
-          <i class="fas fa-regular fa-edit" data-id=${message.id}></i>
+          <i onclick="addAttributeToModal('${message.id}')" class="fas fa-solid fa-trash" data-bs-toggle="modal" data-bs-target="#deleteCardModal" data-id=${message.id}></i>
+          <i onclick="addAttributeToModalUpdate('${message.id}')" class="fas fa-regular fa-edit" data-bs-toggle="modal" data-bs-target="#updateCardModal" data-id=${message.id}></i>
         </div>
       `
 
-      messagesContainer.appendChild(messageCard)
-
-      const deleteIcon = messageCard.querySelector('.fa-trash')
-
-      deleteIcon.addEventListener('click', () => {
-        const messageId = deleteIcon.getAttribute('data-id')
-
-        deleteMessage(messageId)
-      })
-
-      const editIcon = messageCard.querySelector('.fa-edit')
-      editIcon.addEventListener('click', () => {
-        const messageId = editIcon.getAttribute('data-id')
-
-        navigateToEditPage(messageId)
-      })
+      messagesContainer.appendChild(messageCard);
     });
 
     if (messages.length === 0) {
-      const h3 = document.createElement('h3')
-      h3.textContent = 'Nenhum recado cadastrado.'
-      messagesContainer.appendChild(h3)
+      const h3 = document.createElement('h3');
+      h3.textContent = 'Nenhum recado cadastrado.';
+      messagesContainer.appendChild(h3);
     }
   } catch (error) {
     console.log('Erro ao buscar mensagens', error)
   }
 }
 
-fetchMessages(currentPage)
-
-function navigateToEditPage(messageId) {
-  location.href = `editar-recado.html?id=${messageId}`
+function deleteMessage() {
+  deleteMessage();
 }
+
+fetchMessages(currentPage);
+
+function addAttributeToModal(id) {
+  userMessage.innerHTML = ""
+  localStorage.setItem('messageToDelete', id);
+}
+
+function addAttributeToModalUpdate(id) {
+  userMessage.innerHTML = ""
+  localStorage.setItem('messageToUpdate', id);
+  populateEditForm()
+}
+
 
 prevPage.addEventListener('click', () => {
   if (currentPage > 1) {
