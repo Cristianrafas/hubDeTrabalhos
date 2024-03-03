@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2 PHP</title>
+    <style>
+        body {
+            background-color: rgb(37, 36, 36);
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modelagem de objetos em PHP</h1>
+    <h2>Atividade 1</h2>
+    <h3>Crie uma classe Contador, que encapsule um valor usado para
+        contagem de itens ou eventos. A classe deve oferecer métodos que
+        devem:<br>
+        a- Zerar;<br>
+        b- Incrementar;<br>
+        c- Retornar o valor do contador.</h3>
+    <img src="../../assets/phpAtividades/exercicio2902A1.png" alt="" srcset="">
+    <img src="../../assets/phpAtividades/exercicio2902A1_2.png" alt="" srcset="">
+    <!-- <?php
+
+class Contador {
+    public $contador;
+
+    public function zerar() {
+        $this-> contador = 0;
+        echo "Valor do contador: $this->contador";
+    }
+
+    public function incremento() {
+        $this-> contador++;
+        echo "Valor do contador: $this->contador";
+    }
+
+    public function decremento() {
+        $this-> contador--;
+        echo "Valor do contador: $this->contador";
+    }    
+
+    public function mostrarContador() {
+        echo "Valor do contador: $this->contador";
+    }
+} -->
+
+    <h2>Atividade 2</h2>
+    <h3>Crie uma classe que modele uma bola: <br>
+        a. Atributos<br>
+        i. Cor<br>
+        ii. Circunferência<br>
+        iii. Material<br>
+        b. Métodos<br>
+        i. Trocar Cor<br>
+        ii. Mostrar cor</h3>
+    <img src="../../assets/phpAtividades/exercicio2902A2.png" alt="" srcset="">
+    <img src="../../assets/phpAtividades/exercicio2902A2_2.png" alt="" srcset="">
+    <!-- <?php
+
+class bola{
+    public $cor;
+    public $circunferencia;
+    public $material;
+
+    public function __construct($cor, $circunferencia, $material) {
+        $this->cor = $cor;
+        $this->circunferencia = $circunferencia;
+        $this->material = $material;
+    }
+
+    public function trocarCor($corNova) {
+        $this->cor = $corNova;
+    }
+
+    public function mostrarCor(){
+        echo "A cor atual da bola é: $this->cor";
+    }
+}
+-->
+    <h2>Atividade 3</h2>
+    <h3>Crie uma classe para implementar uma conta corrente. A classe
+        deve possuir os seguintes atributos: <br>
+        a. Número da conta<br>
+        b. Nome do correntista<br>
+        c. Saldo<br>
+        Os métodos são os seguintes:<br>
+        a. Alterar nome<br>
+        b. Deposito<br>
+        c. Saque<br>
+        No construtor, o saldo é opcional, com valor padrão zero e os
+        demais atributos são obrigatórios. A conta não pode ficar com saldo
+        negativo.</h3>
+    <img src="../../assets/phpAtividades/exercicio2902A3.png">
+    <img src="../../assets/phpAtividades/exercicio2902A3_2.png">
+    <!-- <?php
+
+class Conta {
+    public $numDaConta;
+    public $nomeDoCorrentista;
+    public $saldo;
+
+    public function __construct($numDaConta, $nomeDoCorrentista, $saldo = 0){
+        $this->numDaConta = $numDaConta;
+        $this->nomeDoCorrentista = $nomeDoCorrentista;
+        $this->saldo = $saldo;
+    }
+
+    public function alterarNome($nome) {
+        $this->nomeDoCorrentista = $nome;
+        echo "Nome do correntista: $this->nomeDoCorrentista";
+    }
+
+    public function deposito($valor) {
+        $this->saldo =+ $valor;
+        echo "Valor do saldo atual: $this->saldo";
+    }
+
+    public function saque($valor) {
+        if ($this->saldo >= $valor) {
+            echo "Valor retirado: $valor </br>";
+            $this->saldo -= $valor;
+            echo "Valor do saldo atual: $this->saldo";
+        } else {
+            echo "Você não tem saldo para retirar esse valor!";
+        }
+    }
+} -->
+<h2>Atividade 4</h2>
+<h3>Crie uma classe para representar uma Calculadora.<br> Esta classe
+    deve conter um atributo que servirá para armazenar o histórico das
+    operações e seus respectivos resultados.<br>
+    a. Esta classe deve conter as operações de somar, multiplicar,
+    dividir e diminuir.<br>
+    b. Esta classe deve iniciar com o histórico vazio<br>
+    c. Esta classe deve conter uma ação para visualizar o histórico.</h3>
+<img src="../../assets/phpAtividades/exercicio2902A4.png">
+<img src="../../assets/phpAtividades/exercicio2902A4_2.png">
+<!-- <?php
+
+class calculadora {
+    public $historico;
+    public $operacao;
+
+    public function somar($valor1, $valor2) {
+        $result = $valor1 + $valor2;
+        $this->operacao ++;
+        echo "$valor1 + $valor2 = $result </br>";
+        $this->historico .= "Operação $this->operacao: $valor1 + $valor2 = $result </br>";
+    }
+    public function subtrair($valor1, $valor2) {
+        $result = $valor1 - $valor2;
+        $this->operacao ++;
+        echo "$valor1 - $valor2 = $result </br>";
+        $this->historico .= "Operação $this->operacao: $valor1 - $valor2 = $result </br>";
+    }
+    public function dividir($valor1, $valor2) {
+        $result = $valor1 / $valor2;
+        $this->operacao ++;
+        echo "$valor1 / $valor2 = $result </br>";
+        $this->historico .= "Operação $this->operacao: $valor1 / $valor2 = $result </br>";
+    }
+    public function multiplicar($valor1, $valor2) {
+        $result = $valor1 * $valor2;
+        $this->operacao ++;
+        echo "$valor1 * $valor2 = $result </br>";
+        $this->historico .= "Operação $this->operacao: $valor1 * $valor2 = $result </br>";
+    }
+    public function mostrarHistorico(){
+        echo "Histórico: </br> $this->historico";
+    }
+}
+} -->
+<h2>Atividade 5</h2>
+<h3>Faça um programa completo utilizando classes e métodos que:
+    a. Possua uma classe chamada BombaCombustivel, com no
+    mínimo esses atributos:<br>
+    i. tipoCombustivel.<br>
+    ii. valorLitro.<br>
+    
+    iii. quantidadeCombustivel.<br>
+    b. Possua no mínimo esses métodos:<br>
+    i. abastecerPorValor método onde é informado o
+    valor a ser abastecido e mostra a quantidade de litros
+    que foi colocada no veículo<br>
+    ii. abastecerPorLitro método onde é informado a
+    quantidade em litros de combustível e mostra o valor a
+    ser pago pelo cliente.<br>
+    iii. alterarValor altera o valor do litro do combustível.<br>
+    iv. alterarCombustivel altera o tipo do combustível.<br>
+    v. alterarQuantidadeCombustivel altera a
+    quantidade de combustível restante na bomba.<br>
+    
+    OBS: Sempre que acontecer um abastecimento é necessário
+    atualizar a quantidade de combustível total na bomba.<br> Não deve ser
+    possível abastecer se não tiver gasolina suficiente na bomba.</h3>
+<img src="../../assets/phpAtividades/exercicio2902A5.png">
+<img src="../../assets/phpAtividades/exercicio2902A5_2.png">
+
+<!-- <?php
+
+class BombaDeCombustivel {
+    public $tipoDeCombustivel;
+    public $valorLitro;
+    public $quantidadeCombistivel;
+
+    public function __construct($tipoDeCombustivel = 'gasolina', $valorLitro = 5.50, $quantidadeCombistivel = 500){
+        $this->tipoDeCombustivel = $tipoDeCombustivel;
+        $this->valorLitro = $valorLitro;
+        $this->quantidadeCombistivel = $quantidadeCombistivel;
+    }
+
+    public function abastecerPorValor($valor) {
+        $litrosAbastecidos = $valor / $this->valorLitro;
+        $litrosAbastecidosR = number_format($litrosAbastecidos, 2);
+        echo "Com o valor de $valor, voce conseguiu abastecer $litrosAbastecidosR! <br>
+        Litros disponíveis no momento: $this->quantidadeCombistivel. <br>";
+        if($litrosAbastecidosR <= $this->quantidadeCombistivel) {
+            $this->quantidadeCombistivel -= $litrosAbastecidosR;
+            echo "Abastecimento concluido com sucesso, litros restantes na bomba: $this->quantidadeCombistivel <br>";
+        } else {
+            echo "Quantidade indisponível de combustivel.";
+        }
+    }
+    
+    public function abastecerPorLitro($litros) {
+        if ($this->quantidadeCombistivel >= $litros){
+            $custoTotal = $litros * $this->valorLitro;
+            echo "Abastecendo $litros litros, você pagará $custoTotal! <br>";
+            $this->quantidadeCombistivel -= number_format($litros, 2);
+            echo "Abastecimento concluido! Sobrou $this->quantidadeCombistivel<br>";
+    } else {
+        echo "Quantidade acima do disponível, favor escolher outra quantidade de litros! <br>";
+    }
+    }
+
+    public function alterarValor($valor){
+        $this->valorLitro = $valor;
+        echo "Valor do litro alterado para $valor! <br>";
+    }
+
+    public function alterarCombustivel($combustivel){
+        $this->tipoDeCombustivel = $combustivel;
+        echo "Tipo de combustivel alterado para $combustivel! <br>";
+    }
+
+    public function alterarQuantidadeCombustivel($quantidade){
+        $this->quantidadeCombistivel = $quantidade;
+        echo "Quantidade de combustivel alterado para $quantidade! <br>";
+    }
+} -->
+<h2>Atividade 6</h2>
+<h3>Implemente uma classe chamada Carro com as seguintes
+    propriedades:<br>
+    a. Um veículo tem um certo consumo de combustível (medidos
+    em km / litro) e uma certa quantidade de combustível no
+    tanque.<br>
+    b. O consumo é especificado no construtor e o nível de
+    combustível inicial é 0.<br>
+    c. Forneça um método andar() que simula o ato de dirigir o
+    veículo por uma certa distância, reduzindo o nível de
+    combustível no tanque de gasolina.<br>
+    
+    d. Forneça um método obterGasolina(), que retorna o nível atual
+    de combustível e forneça um método adicionarGasolina(),
+    para abastecer o tanque.</h3>
+<img src="../../assets/phpAtividades/exercicio2902A6.png">
+<img src="../../assets/phpAtividades/exercicio2902A6_2.png">
+<!-- <?php
+
+
+class Carro {
+
+    public $consumo;
+    public $combustivel;
+
+    public function __construct ($consumo, $combustivel = 0){
+        $this->consumo = $consumo;
+        $this->combustivel = $combustivel;
+    }
+
+    public function andar($distancia){
+        $litrosGastos = $distancia / $this->consumo;
+        $litrosGastos = number_format($litrosGastos, 2);
+        echo "Andando esta distancia consumirá: $litrosGastos <br>";
+        $this->combustivel -= $litrosGastos;
+        echo "Sobrando $this->combustivel <br>";
+    }
+
+    public function adincionarGasolina($gasolina){
+        $this->combustivel += $gasolina;
+        echo "Abastecido $gasolina <br>";
+    }
+
+    public function obterGasolina(){
+        echo "O combustivel atual é: $this->combustivel <br>";
+    }
+} -->
+    <h4>*O código original da atividade está comentado no codígo desta atividade no github.</h4>
+</body>
+
+</html>
