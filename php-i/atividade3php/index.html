@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3 PHP</title>
+    <style>body {
+        background-color: rgb(37, 36, 36);
+        color: white;
+        text-align: center;
+    }</style>
+</head>
+
+<body>
+    <h1>Atividade Prática - Pilares POO</h1>
+    <h2>Atividade 1</h2>
+    <h3>Crie uma classe abstrata chamada Ingresso que possui um valor
+        em reais e um método imprimeValor()<br>
+        a. crie uma classe Normal, que herda Ingresso..<br>
+        b. crie uma classe VIP, que herda Ingresso e possui um valor
+        adicional. Altere o método imprimeValor para mostrar o valor
+        do ingresso somado com o adicional.<br>
+        c. crie uma classe Camarote, que herda ingresso e possui um
+        valor adicional. Altere o método imprimeValor para mostrar o
+        valor do ingresso somado com o adicional.<br></h3>
+    <img src="../../assets/phpAtividades/exercicio0703A1.png" alt="" srcset="">
+    <!-- <?php
+abstract class Ingresso{
+    public $valor;
+
+    abstract function imprimirValor();}
+class Normal extends Ingresso{
+    public function __construct($valor){
+        $this->valor = $valor;}
+    public function imprimirValor(){
+        echo "O valor do Ingresso Normal é: $this->valor <br>";}
+}
+
+class Vip extends Ingresso{
+    public function __construct($valor, $valorVip = 20){
+        $this->valor = $valorVip + $valor;}
+    public function imprimirValor(){
+        echo "O valor do Ingresso Vip é: $this->valor <br>";}
+}
+class Camarote extends Ingresso{
+    public function __construct($valor, $valorVip = 50){
+        $this->valor = $valorVip + $valor;}
+    public function imprimirValor(){
+        echo "O valor do Ingresso de Camarote é: $this->valor <br>";}
+} -->
+
+    <h2>Atividade 2</h2>
+    <h3>Crie a classe Imovel, que possui um endereço e um preço.<br>
+        a. crie uma classe Novo, que herda Imovel e possui um adicional
+        no preço. Crie métodos de acesso e impressão deste valor
+        adicional.<br>
+        b. crie uma classe Velho, que herda Imovel e possui um desconto
+        no preço. Crie métodos de acesso e impressão para este
+        desconto.<br></h3>
+    <img src="../../assets/phpAtividades/exercicio0703A2.png" alt="" srcset="">
+    <!-- <?php
+    class Imovel{
+    public $endereco;
+    public $preco;
+    }
+
+    class Novo extends Imovel{
+        public function __construct($endereco, $preco){
+            $this->endereco = $endereco;
+            $this->preco = $preco;
+        }
+        public function relatorio(){
+            $taxa = $this->preco * 0.3;
+            $precoFinal = $this->preco + $taxa;
+            echo "Endereço: $this->endereco <br> Preço Original: $this->preco <br> 
+            Taxa por ser novo: $taxa <br> Preço total: $precoFinal <br>";
+        }
+    }
+
+    class Velho extends Imovel{
+        public function __construct($endereco, $preco){
+            $this->endereco = $endereco;
+            $this->preco = $preco;
+        }
+        public function relatorio(){
+            $desconto = $this->preco * 0.3;
+            $precoFinal = $this->preco - $desconto;
+            echo "Endereço: $this->endereco <br> Preço Original: $this->preco <br> 
+            Desconto por ser antigo: $desconto <br> Preço total: $precoFinal <br>";
+        }
+    }
+
+    $apartamento = new Novo('NH', 100000);
+    $casaMadeira = new Velho('SL', 250000);
+    $apartamento->relatorio();
+    $casaMadeira->relatorio(); -->
+    <h2>Atividade 3</h2>
+    <h3>Dado o seguinte diagrama: <br>
+
+        Identifique os atributos e comportamentos que são comuns entre os
+        3 animais e encapsule-os na superclasse Animal.<br> Crie pelo menos 1
+        comportamento diferente para cada animal.<br></h3>
+    <img src="../../assets/phpAtividades/exercicio0703A3.png">
+    <!-- <?php
+abstract class Animal{
+    public $especie;
+    public $cor;
+    public $anda;
+
+    abstract public function Mostrar();}
+
+class Gato extends Animal{
+    public $arranha;
+
+    public function __construct($especie, $cor, $anda, $arranha){
+        $this->especie = $especie;
+        $this->cor = $cor;
+        $this->anda = $anda;
+        $this->arranha = $arranha;}
+
+    public function mostrar(){
+        echo "Especie: $this->especie <br>
+            Cor: $this->cor <br>
+            Anda: $this->anda <br>
+            Esse gato arranha? $this->arranha <br>";}
+}
+class Cachorro extends Animal{
+    public $morde;
+
+    public function __construct($especie, $cor, $anda, $morde){
+        $this->especie = $especie;
+        $this->cor = $cor;
+        $this->anda = $anda;
+        $this->morde = $morde;}
+
+    public function mostrar(){
+        echo "Especie: $this->especie <br>
+                Cor: $this->cor <br>
+                Anda: $this->anda <br>
+                Esse cachorro morde? $this->morde <br>";}
+}
+class Cavalo extends Animal{
+    public $pulaObstaculos;
+    
+    public function __construct($especie, $cor, $anda, $pulaObstaculos){
+        $this->especie = $especie;
+        $this->cor = $cor;
+        $this->anda = $anda;
+        $this->pulaObstaculos = $pulaObstaculos;}
+    public function mostrar(){
+        echo "Especie: $this->especie <br>
+                Cor: $this->cor <br>
+                Anda: $this->anda <br>
+                Esse cavalo pula obstaculos? $this->pulaObstaculos <br>";}
+}
+
+$clotilde = new Cachorro('Vira-lata', 'branco', 'sim', 'não');
+$clotilde->mostrar(); -->
+
+<h4>*O código original da atividade está comentado no codígo desta atividade no github.</h4>
+</body>
+
+</html>
